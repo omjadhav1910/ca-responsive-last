@@ -8,7 +8,6 @@ https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-r
 
 body {
     margin: 0;
-    user-select: none;
 }
 
 .header {
@@ -227,16 +226,46 @@ body {
 }
 
 .nav-right-image-amazon-prime {
-    min-width: 90px;
-    height: 200;
-    max-width: 300px;
+    min-width: 300px;
+    height: 300;
+    max-width: 500px;
 }
 
 .nav-right-image-amazon-prime img {
     width: 100%;
     height: 100%;
 }
+.card-product-last{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 330px;
+    height: 170px;
+     
+    padding: 10px;
+}
+.last-img{
+    width: 300px;
+    height: 200px;
+    margin-top: 70px;
+}
+.tv{
+    width: 100%;
+    height: 90%;
+    
+}
+.sign-in {
+    background-color: yellow;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    margin-top: 100px;
+    margin-left: 15px;
 
+}
 .prime-image {
     background-color: white;
     height: 350px;
@@ -268,6 +297,7 @@ body {
 /*--image slider --*/
 .image-container {
     position: relative;
+    height: 100%;
 }
 
 .image-list {
@@ -420,9 +450,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 330px;
-    /* box-shadow: -10px -0px 20px rgba(196, 240, 240,0.5),
-    50px 50px 20px rgba(196, 240, 240,0.5); */
+    max-width: 310px;
     padding: 10px;
 }
 .card-product h2{
@@ -438,39 +466,13 @@ body {
 
 
 }
-.tv{
-    width: 100%;
-    height: 90%;
-    
-}
-.sign-in {
-    background-color: yellow;
-    border: none;
-    border-radius: 3px;
-    position: absolute;
-    width: 20%;
-    height: 10%;
-    margin-top: 100px;
-    margin-left: 15px;
+
+.card-nested {
 
 }
-.last-img{
-    width: 300px;
-    height: 200px;
-    margin-top: 70px;
-}
-.card-product-last{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 330px;
-    height: 170px;
-     
-    padding: 10px;
-}
+
 .card-nested p{
-    margin: 0px;
+    margin: 5px;
 }
 .card-nested img {
     width: 128px;
@@ -587,199 +589,485 @@ body {
     outline: none;
     background-color: rgb(255,255,255,0.4);
 }
-.container {
+ 
+
+.container-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.card-product {
-    width: 30%; /* Adjust as needed for your design */
-    margin-bottom: 20px;
+.logo-container,
+.address-container,
+.language-container,
+.login-container,
+.return-order-container,
+.cart-container {
+    display: none; /* Hide all other containers by default */
 }
 
-.card-nested {
-    text-align: center;
+.logo-container,
+.search-container {
+    flex: 1; /* Allow logo and search to take equal space */
+}
+.nav {
+    /* Your existing styles for the navigation bar */
 }
 
-.card-nested img {
-    max-width: 100%;
-    height: auto;
+.container-nav {
+    /* Your existing styles for the container */
 }
 
-.card-product-btn {
-    background-color: #febd69;
-    color: #131a22;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.card-product-last {
-    width: 100%;
-    text-align: center;
-}
-
-.sign-in {
-    background-color:#f19f35;
-    border-radius: 18px;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.last-img {
-    max-width: 100%;
-    height: auto;
+li {
+    /* Your existing styles for list items */
 }
 .image-container {
-    position: relative;
+    /* Your existing styles for the image container */
 }
 
 .image-list {
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .image-item {
+    width: 100%; /* Ensure the image takes 100% of the available width */
+}
+
+img {
+    max-width: 100%; /* Make the image responsive within its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+    /* Your existing styles for the slider buttons */
+
+.main {
+    /* Your existing styles for the main container */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.container {
+    /* Your existing styles for the container */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-product {
+    /* Your existing styles for the card product */
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+}
+
+.card-product-nested-card {
+    /* Your existing styles for the nested cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.card-nested, .card-nested-1 {
+    /* Your existing styles for the nested cards */
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(19, 25, 33);
+    height: 60px;
+    color: white;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container,
+.address-container,
+.language-container,
+.login-container,
+.return-order-container,
+.cart-container {
+    display: none;
+}
+
+.logo-container,
+.search-container {
+    flex: 1;
+}
+
+.logo {
+    width: 120px;
+    height: 50px;
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+    background-repeat: no-repeat;
+    background-position-y: -40px;
+    overflow: hidden;
+}
+
+.dotin {
+    position: relative;
+    margin-left: -13px;
+    margin-top: -10px;
+}
+
+.border-white {
+    padding: 5px;
+    border: 1.5px solid transparent;
+}
+
+.border-white:hover {
+    border: 1.5px solid #ffffff;
+}
+
+.address-container {
+    margin-left: -10rem;
+}
+
+.address-container p {
+    margin: 0;
+}
+
+.icon-address {
+    display: flex;
+    align-items: center;
+}
+
+.hello {
+    font-size: 0.8rem;
+    padding-left: 20px;
+    color: #ccc;
+}
+
+.icon-location {
+    margin-right: 3px;
+}
+
+.search-container {
+    background-color: red;
+    margin-left: 25px;
+    width: 640px;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.search-container:hover {
+    outline: 3px solid orange;
+}
+
+.search-select {
+    width: 60px;
+    border: none;
+    background-color: rgb(230, 227, 227);
+}
+
+.search-input {
     width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 3px;
+    font-size: 1.1rem;
+}
+
+.search-icon {
+    width: 50px;
+    background-color: rgb(235, 160, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.language-container {
+    margin-left: 25px;
+}
+
+.language-container p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.lauguge-image {
+    width: 20px;
+}
+
+.lauguge-image img {
+    width: 100%;
+}
+
+.login-container {
+    margin-left: 15px;
+}
+
+.login-container p {
+    margin: 0;
+}
+
+.account {
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.return-order-container {
+    width: 65px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.return-order-container p {
+    margin: 0;
+}
+
+.order {
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    width: 70px;
+}
+
+.cart-container {
+    font-size: 1.1rem;
+    display: flex;
+}
+
+.cart-container i {
+    font-size: 1rem;
+}
+
+.nav {
+    height: 40px;
+    background-color: #232f3d;
+    margin: 0;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+.container-nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1rem;
+    color: white;
+    list-style: none;
+}
+
+.container-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 2px;
+}
+
+.nav-right-image-amazon-prime {
+    min-width: 300px;
+    height: 300;
+    max-width: 500px;
+}
+
+.nav-right-image-amazon-prime img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-product-last {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 330px;
+    height: 170px;
+    padding: 10px;
+}
+
+.last-img {
+    width: 300px;
+    height: 200px;
+    margin-top: 70px;
+}
+
+.tv {
+    width: 100vw;
+    height: 90%;
+}
+
+.sign-in {
+    background-color: yellow;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    margin-top: 100px;
+    margin-left: 15px;
+}
+
+.prime-image {
+    background-color: white;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    color: #000;
+    margin-left: -10px;
+    transition: display 1s;
+    padding: 10px;
+}
+
+.prime-image-hover:hover .prime-image {
+    transition: display 1s;
+    display: block;
+}
+
+.prime-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    position: relative;
+    height: 100%;
+}
+
+.image-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.image-item {
+    min-width: 100%;
+    height: 600px;
+    transition: transform 0.3s;
 }
 
 .image-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image-btn-container {
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 0;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
+    width: 100%;
 }
 
 .slider-btn {
-    background-color: #febd69;
-    color: #131a22;
-    padding: 10px;
-    border: none;
+    border: 1px solid transparent;
+    padding: 100px 20px;
+    font-size: 50px;
+    font-weight: 300;
+    background-color: transparent;
+    color: #000;
+}
+
+.slider-btn i {
+    font-weight: 900;
+}
+
+.slider-btn:focus {
+    border-color: seagreen;
+    box-shadow: -2px -2px 2px rgb(230, 227, 227),
+        2px 2px 2px white;
+    margin: 2px;
+}
+
+#open-nav-sidebar {
     cursor: pointer;
 }
-.prime-image {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #131a22;
-    padding: 10px;
+
+.sidebar-container-navigation {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    transform: translateX(-100%);
+    display: flex;
+    transition: transform 0.3s;
 }
 
-.prime-image img {
-    width: 50px;
-    height: 50px;
+.slidebar-show {
+    transform: translateX(0%);
+    background-color: rgba(0, 0, 0, );
 }
 
-.prime-image-hover:hover .prime-image {
-    display: block;
-}
-@media (max-width: 768px) {
-    .container-header {
-        flex-direction: column;
-        align-items: stretch;
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Adjust the grid for single column on smaller screens */
     }
 
-    .logo-container {
-        margin-bottom: 10px;
+    .card-product {
+        grid-template-rows: auto auto auto auto; /* Adjust the grid for stacking on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image-list {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-nav {
+        display: none; /* Hide the container on smaller screens */
+    }
+
+    .nav {
+        display: block; /* Display the navigation bar as a block on smaller screens */
+    }
+
+    #open-nav-sidebar {
+        display: block; /* Display the open navigation slider on smaller screens */
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .logo-container,
+    .address-container,
+    .language-container,
+    .login-container,
+    .return-order-container,
+    .cart-container {
+        display: block; /* Display the other containers for larger screens */
     }
 
     .search-container {
-        flex: 1;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .search-select,
-    .search-input {
-        width: 100%;
-    }
-
-    .language-container {
-        display: none; /* Hide language container on smaller screens */
-    }
-
-    .return-order-container {
-        display: none; /* Hide return order container on smaller screens */
-    }
-}
-@media (max-width: 768px) {
-    .container-header {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .logo-container {
-        margin-bottom: 10px;
-    }
-
-    .search-container {
-        display: none; /* Hide the entire search container on smaller screens */
-    }
-
-    .language-container {
-        display: none; /* Hide language container on smaller screens */
-    }
-
-    .return-order-container {
-        display: none; /* Hide return order container on smaller screens */
-    }
-}
-/* Responsive Styles */
-@media (max-width: 768px) {
-    ul {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    li {
-        margin: 10px 0;
-    }
-
-    .nav-right-image-amazon-prime {
-        display: none;
-    }
-}
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .image-item {
-        width: 100%; /* Make each image take full width on smaller screens */
-    }
-
-    .slider-btn {
-        font-size: 18px; /* Adjust button size for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .image-btn-container {
-        flex-direction: column; /* Stack buttons vertically on smaller screens */
-        align-items: center;
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .card-product {
-        width: 45%; /* Adjust for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .card-product {
-        width: 100%; /* Full width for smaller screens */
+        flex: 2; /* Make search container take more space on larger screens */
     }
 }
